@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naa’s Design Portfolio | Designing for Impact</title>
+    <meta name="description" content="Explore a multidisciplinary design portfolio featuring graphic design, brand identity, and digital experiences made to connect with people and create impact.">
+
+    <!-- Canonical Links Explanation:
+    Canonical links tell search engines which URL is the official version when the same content is available at multiple addresses. This helps prevent ranking signals from being split across duplicate URLs.
+    -->
+
+    <link rel="canonical" href="https://addy0013.github.io/addy0013-a8/">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- adding skip link  -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <p>Designing for Impact</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="explore.html">Explore</a>
+      <a href="contact.html">Contact Me</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- creating hero section -->
+    <section>
+      <!-- <h1>Here to Create Designs That Leave A Lasting Impact...</h1> -->
+      <!-- chainging h1 to match correct heading structure and state topic plainly -->
+      <h1>Naa’s Multidisciplinary Design Portfolio</h1>
+      <p class="hero-tagline"> Here to Create Designs That Leave A Lasting Impact...</p>
+      <p>Welcome to my world of impact. Explore my work across visual storytelling, digital experiences, and all things design.</p>
+
+      <a href="projects.html">View My Projects</a>
+    </section>
+
+     <section>
+      <h2>Projects</h2>
+
+      <div class="projects">
+        <article>
+          <!-- decorative image so empty alt text -->
+          <img src="images/gradient-blob.jpg" alt="" width="200" height="200">
+          <h3>Case Study 1</h3>
+          <p>Graphic Design Project</p>
+        </article>
+
+        <!-- decorative image so empty alt text -->
+        <article>
+          <img src="images/gradient-loop.jpg" alt="" width="200" height="200">
+          <h3>Case Study 2</h3>
+          <p>Brand Identity Project</p>
+        </article>
+
+        <!-- decorative image so empty alt text -->
+        <article>
+          <img src="images/pastel-gradient.jpg" alt="" width="200" height="200">
+          <h3>Case Study 3</h3>
+          <p>UX/UI Design Project</p>
+        </article>
+      </div>
+
+
+      <!-- link-vs-button activation difference:
+        A link navigates the user to another location, and is activated with the enter key. 
+        A button performs an action and is activated with the enter or space key.
+      -->
+    </section>
+
+    <section>
+      <h2>Explore</h2>
+      <p><!-- Experiments, ideas and interaction concepts. --></p>
+      <a href="explore.html">Explore My Ideas</a>
+    </section>
+
+    <section>
+      <h2>Contact Me</h2>
+      <p>Let’s connect. I’d love to bring your ideas to life.</p>
+
+      <!-- creating contact form -->
+       
+      <!-- explaing POST over GET -->
+      <!-- POST is used because a contact form collects personal information
+     and submits data rather than retrieving information.
+     Unlike GET, POST sends the form data in the request body instead
+     of displaying it in the URL.-->
+      <form action="result.html" method="POST">
+
+      <!-- explaining why labels over placeholder -->
+      <!-- Every form control needs a connected label for accessibility.
+     Labels help screen readers identify fields and allow users
+     to click the label to focus the input. Placeholders are only
+     hints and cannot replace labels because they disappear when
+     users start typing. -->
+
+      <div>
+        <!-- getting full name -->
+          <label for = "name">Name </label>
+          <input type="text" id="name" name="fullname" required placeholder="Your full name...">
+      </div>
+
+      <div>
+        <!-- getting email -->
+         <label for="email">Email address</label>
+          <input type="email" id="email" name="email" required placeholder="Your email address..." autocomplete="email">
+      </div>
+
+               
+     <div>
+      <!-- drop down for Subject-->
+        <label for="sbj">Subject</label>
+        <select name="subject" id="sbj">
+            <option value="" selected disabled>Select a subject</option>
+            <option value="general">General Inquiry</option>
+            <option value="collab">Design Collaboration</option>
+            <option value="experiment">Creative Experiments</option>
+            <option value="feedback">Portfolio Feedback</option>
+            <option value="other">Other</option>
+        </select>
+     </div>
+
+
+     <div>
+      <!-- message  -->
+        <label for="msg">Message</label>
+        <textarea name="message" id="msg" required></textarea>
+     </div>
+
+      <div>
+        <!-- preferred contact method -->
+        <fieldset>
+            <legend>How would you like me to reach you?</legend>
+            
+            <input type="radio" id="contact-email" name="contact-method" value="email">
+            <label for="contact-email">Email</label>
+
+            <input type="radio" id="contact-num" name="contact-method" value="phone">
+            <label for="contact-num">Phone Number</label>
+            
+            <input type="radio" id="contact-none" name="contact-method" value="none">
+            <label for="contact-none">No Preference</label>
+        </fieldset>
+     </div>
+
+        <!-- Submit Button -->
+      <div>
+        <button type = "submit">Submit</button>
+      </div>
+      </form>
+
+
+      <!-- Data Table -->
+      <h3>Ways to Connect</h3>
+      <table>
+        <caption>Find Me Across These Platforms</caption>
+        <thead>
+          <tr>
+            <th scope="col">Platform</th>
+            <th scope="col">Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Email</th>
+            <td>General Inquiries</td>
+          </tr>
+
+          <tr>
+            <th scope="row">LinkedIn</th>
+            <td>Professional networking</td>
+          </tr>
+
+          <tr>
+            <th scope="row">GitHub</th>
+            <td>Explore my coding projects</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Instagram</th>
+            <td>Creative work and updates</td>
+          </tr>
+
+    
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <th colspan="2">Let's create something together!</th>
+          </tr>
+        </tfoot>
+
+      </table>
+       <p><!-- Social Media Icons --></p>
+    </section>
+
+  </main>
+
+  <footer>
+
+    <p>2026 Designing for Impact. All rights reserved.</p>
+
+  </footer>
+</body>
+
+</html>

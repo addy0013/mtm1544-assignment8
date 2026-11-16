@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Designing for Impact</title>
+    <meta name="description" content="Have a project idea, collaboration, or feedback to share? Get in touch with Naa to discuss thoughtful design, creative possibilities, and digital experiences">
+
+    <link rel="canonical" href="https://addy0013.github.io/addy0013-a8/contact.html">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+     <!-- adding skip link  -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header aria-label="Main navigation">
+    <p>Designing for Impact</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" >About Me</a>
+      <a href="projects.html"> Projects</a>
+      <a href="explore.html" >Explore</a>
+      <a href="contact.html"aria-current="page">Contact Me</a>
+    </nav>
+  </header>
+
+    <main id="main">
+    <section>
+        <!-- chainging h1 to match correct heading structure and state topic plainly -->
+        <!-- <h1>Let's bring your ideas to life!</h1> -->
+        <h1>Contact Me</h1>
+        <p>Let's bring your ideas to life!</p>
+        <form action="result.html" method="POST">
+            <div>
+            <!-- getting full name -->
+            <label for = "name">Name </label>
+            <input type="text" id="name" name="fullname" required placeholder="Your full name...">
+        </div>
+
+        <div>
+            <!-- getting email -->
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required placeholder="Your email address..." autocomplete="email">
+        </div>
+
+                
+        <div>
+        <!-- drop down for Subject-->
+            <label for="sbj">Subject</label>
+            <select name="subject" id="sbj">
+                <option value="" selected disabled>Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="collab">Design Collaboration</option>
+                <option value="experiment">Creative Experiments</option>
+                <option value="feedback">Portfolio Feedback</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+
+        <div>
+        <!-- message  -->
+            <label for="msg">Message</label>
+            <textarea name="message" id="msg" required></textarea>
+        </div>
+
+        <div>
+            <!-- preferred contact method -->
+            <fieldset>
+                <legend>How would you like me to reach you?</legend>
+                
+                <input type="radio" id="contact-email" name="contact-method" value="email">
+                <label for="contact-email">Email</label>
+
+                <input type="radio" id="contact-num" name="contact-method" value="phone">
+                <label for="contact-num">Phone Number</label>
+                
+                <input type="radio" id="contact-none" name="contact-method" value="none">
+                <label for="contact-none">No Preference</label>
+            </fieldset>
+        </div>
+
+            <!-- Submit Button -->
+        <div>
+            <button type = "submit">Submit</button>
+        </div>
+      </form>
+
+
+
+
+    </section>
+  </main>
+
+    
+  <footer>
+
+    <p>2026 Designing for Impact. All rights reserved.</p>
+
+   </footer>
+</body>
+</html>

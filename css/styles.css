@@ -1,0 +1,160 @@
+/* selected font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:wght@100..900&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* creating color palette & typography */
+:root {
+    --primary: oklch(35.866% 0.06107 238.218);
+    --secondary: oklch(73.664% 0.10915 195.089);
+    --accent-plum: oklch(54.234% 0.08222 332.84);
+    --accent-gold: oklch(80.592% 0.12197 82.772);
+    --background-pink: oklch(84% 0.073 338);
+    --background-aqua: oklch(84.1% 0.04557 205.198);
+    --neutral-dark: oklch(26.862% 0.00003 271.152);
+    --neutral-light: oklch(98.013% 0.00354 220.952);
+    --headingfont: "Raleway", Arial, Helvetica, sans-serif;
+    --bodyfont: "Inter", Arial, Helvetica, sans-serif;
+}
+
+
+/* fonts */
+h1{
+  font-size: 2.5rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+h3{
+  font-size: 1.5rem;
+}
+/*checked with WebAIM: 14.3:1*/
+body {
+  background-color: var(--neutral-light);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: var(--bodyfont);
+  color: var(--neutral-dark);
+  /* using grid */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
+
+}
+
+/*checked with WebAIM against background: 10.22:1*/
+h1, h2, h3{
+  line-height: 1.2;
+  font-family: var(--headingfont);
+  color: var(--primary);
+}
+
+a {
+  color: var(--primary);
+}
+
+/*checked with WebAIM against background: 4.94:1*/
+a:hover {
+    color: var(--accent-plum);
+}
+
+a:focus-visible {
+    outline: 3px solid var(--accent-plum);
+    outline-offset: 4px;
+}
+
+/* styling the header & navigation */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    p{
+        font-family: var(--headingfont);
+        font-size: 1.25rem;
+        color: var(--primary);
+        font-weight: 700;
+
+    }
+}
+
+/* styling nav with flexbox so links are arranged in one direction and wrap when needed */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: row;
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      padding: 0.5rem;
+    }
+
+    a:hover{
+      text-decoration: underline;
+    }
+
+
+}
+
+main{
+  width: 100%;
+  margin-inline: auto;
+  padding: 1.5rem;
+}
+
+/* styling projects with Grid so cards align in rows and columns.
+   Auto-fit adjusts the column count to the space available.*/
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: 0.5rem;
+
+    img{
+      display: block;
+      width: 100%;
+    }
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+form *{
+  font-family: var(--bodyfont);
+}
+
+
+/* hiding skip link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 100;
+  background-color: var(--neutral-light);
+  padding: 8px 16px;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Creating media query with breakpoints */
+/* breakpoint at 746px */
+@media (min-width: 746px) {
+    header {
+        flex-direction: row;
+    }
+}
