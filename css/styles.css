@@ -174,8 +174,8 @@ form *{
     }
 }
 
-
 /* reduced motion guard */
+/*  !important ensures this guard overrides other animation and transition rules.  */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -186,5 +186,6 @@ form *{
     scroll-behavior: auto !important;
   }
 }
+
 
 
